@@ -1,0 +1,12 @@
+# Core crypto & protocol
+cryptography>=41.0
+spake2>=0.9
+
+# Networking
+websockets>=11.0
+fastapi>=0.100
+uvicorn[standard]>=0.23
+
+# Validation & logging
+pydantic>=2.0
+structlog>=23.0
