@@ -1,0 +1,31 @@
+[project]
+name = "relaybind"
+version = "1.0.0"
+description = "RelayBind: PAKE-secured pairing over an untrusted relay (reference implementation)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Joe Wells" }]
+
+dependencies = [
+  "websockets>=11.0",
+  "fastapi>=0.100",
+  "uvicorn[standard]>=0.23",
+  "spake2>=0.9",
+  "cryptography>=41.0",
+  "structlog>=23.0",
+  "pydantic>=2.0",
+]
+
+[project.scripts]
+relaybind = "relaybind.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
